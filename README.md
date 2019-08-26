@@ -14,14 +14,14 @@ Works best on mobile
 
 # Build
 ```bash
-$ export BACKEND_ADDRESS=http://10.20.30.2:1234
 $ export APP_ENV=dev
-$ docker build -t elm-web-client --build-arg BACKEND_ADDRESS --build-arg APP_ENV .
+$ docker build -t elm-web-client --build-arg APP_ENV .
 ```
 
 # Run development mode
 To run application with live reloading and hot module replacement. First build an image with APP_ENV=dev (see above). Run the following command
 ```bash 
+$ export BACKEND_ADDRESS=http://10.20.30.2:1234
 $ docker run -d -p 8888 elm-web-client
 ```
 

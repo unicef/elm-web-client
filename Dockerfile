@@ -2,6 +2,8 @@ FROM node:11.0.0
 
 WORKDIR /app
 
+ARG APP_ENV
+
 # Move package file to the temp forlder
 ADD package.json /tmp
 # Install dependencies.
